@@ -1,2 +1,2 @@
-# htmk-css
+# html-css
 A-Level HTML CSS
