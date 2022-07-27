@@ -1,0 +1,31 @@
+/* если вам не нужно дефолтное поведение */
+/* * { 
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+} */
+ 
+html {
+    scroll-behavior: smooth;
+}
+
+#my-span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#our-id {
+    color: yellow;
+    border: 2px black solid;
+}
+
+.cls-first {
+    border: 1px solid black;
+    color: green !important;
+}
+
+.cls-first2 {
+    background-color: red;
+}
