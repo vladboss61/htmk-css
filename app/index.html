@@ -2,107 +2,77 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML CSS Lesson</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="./js-script.js" defer></script>
-    </head>
-        <span id="my-span">My Span</span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Lesson</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js-script.js"></script>
+</head>
 
-        <em>emphasis</em>
-        <i>italic</i>
+<body>
+    <span id="my-span">My Span</span>
+
+    <div class="father">
+        <div class="child-margin-padding">Margin-Padding Example</div>
+    </div>
+
+    <div class="box">
+        <div class="m1">One</div>
+        <div class="m1 grow">Two</div>
+        <div class="m1">Three</div>
+    </div>
+
+    <script>
+        window.localStorage.setItem("KeyTest", 10);
+        window.sessionStorage.setItem("KeyTest", 10);
+        const obj = {
+            id: 1,
+            name: "vlad",
+            inner: {
+                innerText: "something"
+            },
+            arr: [1, 2, 4]
+        };
+
+        console.log(obj);
+        console.log(obj.inner.innerText);
+
+        let span = window.document.getElementById("my-span");
+
+        let some = (event) => {
+            console.log(event);
+            console.log('Hello from event on click.');
+        }
+
+        class Test {
+            testField = 'TestField';
+
+            constructor(){
+                let span = window.document.getElementById("my-span");
+                span.addEventListener('click', (event) => {
+                    console.log(this);
+                    console.log('Hello from event on click.');
+                });
+            }
+        }
         
-        <strong>strong</strong>
-        
-        <div style="width: 25px">
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
-            ajsdklajlksajdlksaajkldjlkasdd
+        new Test();
 
-        </div>
+        // span.addEventListener('click',(event) => {
+        //     console.log(event);
+        //     console.log('Hello from event on click.');
+        // });
 
-        <h1>Hello adsasdlsaddasasd;l'</h1>
-        <h2>Hello adsasdlsaddasasd;l'</h2>
-        <h3>Hello adsasdlsaddasasd;l'</h3>
-        <h4>Hello adsasdlsaddasasd;l'</h4>
-        <span id="my-span">My Span</span>
-        <div title="Hello Hello" id="our-id" class="cls-first cls-first2"> Hello Id</div>
-        <span>Spam tag example</span>
-        <div>123</div>
-        <span>Spam tag example</span>
-        <span>Spam tag example</span>
-        <div class="cls-first">Fist Div</div>
-        <div>Without class or id</div>
 
-        <dl>
-            <dt>HTML</dt>
-            <dd>Язык гипертекстовой разметки</dd>
-          </dl>
+        // document.addEventListener("click", () => {
+        //     console.log('Hello document.');
+        // });
 
-          <ul>
-            <li>пункт списка</li>
-            <li>пункт списка</li>
-          </ul>
-          
-        <a href="#my-span">Link to Top </a>
-        
-        <script>
+        console.log(span);
+    </script>
 
-            const obj = {
-                id: 1,
-                name: "vlad",
-                inner: {
-                    innerText: "something"
-                }
-            };
-            
-            console.log(obj);
-            console.log(obj.inner.innerText);
-
-            let span = window.document.getElementById("my-span");
-
-            console.log(span);
-        </script>
-    </body>
+</body>
 
 </html>
